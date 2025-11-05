@@ -15,15 +15,15 @@ class DisableFrontend
      */
     public function handle(Request $request, Closure $next): Response
     {
-        try {
-            $global = global_setting();
+        // try {
+        //     $global = global_setting();
 
-            if ($global->disable_landing_site && !request()->ajax()) {
-                return redirect(route('login'));
-            }
-        } catch (\Exception $e) {
-            // return redirect(route('login'));
-        }
+        //     if ($global->disable_landing_site && !request()->ajax()) {
+        //         return redirect(route('login'));
+        //     }
+        // } catch (\Exception $e) {
+        //     // return redirect(route('login'));
+        // }
 
         return $next($request);
     }
