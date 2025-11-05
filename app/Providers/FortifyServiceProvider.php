@@ -66,13 +66,13 @@ class FortifyServiceProvider extends ServiceProvider
     {
 
         Fortify::loginView(function () {
-            $this->showInstall();
+            // $this->showInstall();
 
-            $this->checkMigrateStatus();
+            // $this->checkMigrateStatus();
 
-            if (!$this->isLegal()) {
-                return redirect('verify-purchase');
-            }
+            // if (!$this->isLegal()) {
+            //     return redirect('verify-purchase');
+            // }
 
             return view('auth.login');
 
